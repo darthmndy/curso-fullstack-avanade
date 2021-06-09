@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo Javascript</title>
+</head>
+<body>
+    <script>
+    
+        let name = 'Amanda' // let não permite a criação de variaveis com o mesmo nome
+
+        //var name = 'Andrade'  // no caso do var, posso criar várias variáveis com o mesmo nome, mas ele só imprimirá o conteudo
+        //var name = 'Santos'  // da última variável declarada
+
+        console.log('Hello,', name,'!')
+
+        const car = //objeto
+        {
+            name: 'brava',
+            model: '2001',
+            color: 'silver'
+        }
+
+        car.name = 'vectra' //altera o name do objeto car
+
+        Object.freeze(car) //congelar seu objeto
+
+        car.name = 'ka' //por conta do freeze, não podemos alterar nenhum elemento do objeto car
+        console.log(car)
+
+        let names = 'Andrade'  
+
+            {
+                let names = 'Amanda' //quando inserimos as chaves, o Javascript considera um bloco novo, por este motivo, podemos 
+                                    //usar uma mesma variável com conteúdos diferentes
+                console.log(names)
+            }
+
+        console.log(names)
+
+    
+
+        function callName() //funções e variáveis não podem ter o mesmo nome
+        { 
+            names = 'Assis' 
+            console.log(names)
+        }
+
+        callName()
+
+    </script> 
+</body>
+</html>
